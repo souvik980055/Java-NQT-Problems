@@ -1,0 +1,21 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class SmallestElement {
+    public static int smallestElement(int arr[]){
+        int min = 900;
+        for(int i=0; i<arr.length; i++){
+            
+            if(arr[i]<min){
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+    
+    public static void main(String[] args) {
+        int arr[] = {50, 30, 60, 20, 40, 20};
+        //selectionSort(arr);
+        System.out.println(smallestElement(arr));
+    }
+}
