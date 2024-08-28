@@ -1,0 +1,19 @@
+public class RemoveDuplicate {
+    public static int removeDuplicate(int[] arr){
+        int store=1;
+        for(int i=1; i<arr.length; i++){
+            if(arr[i] != arr[store-1]){
+                arr[store]= arr[i];
+                store++;
+            }
+        }
+        return store;
+    }
+    public static void main(String[] args) {
+        int arr[] = {10, 10, 10, 20, 30, 30, 30, 40, 40,};
+        int length = removeDuplicate(arr);
+        for(int i=0; i<length; i++){
+            System.out.println(arr[i]);
+        }
+    }
+}
