@@ -1,0 +1,50 @@
+public class AddElement {
+        public static int[] addBeginning(int arr[], int b){
+            int arr2[] = new int[arr.length+1];
+            arr2[0] = b;
+            for(int i=0; i<arr.length; i++){
+                arr2[i+1] = arr[i];
+            }
+            return arr2;
+        }
+        public static int[] addEnd(int arr[], int b){
+            int arr2[] = new int[arr.length+1];
+            arr2[arr.length] = b;
+            for(int i=0; i<arr.length; i++){
+                arr2[i] = arr[i];
+            }
+            return arr2;
+        }
+
+        public static int[] addMiddle(int arr[], int b, int p){
+            int arr2[] = new int[arr.length+1];
+            for(int i=0; i<p; i++){
+                arr2[i] = arr[i];
+            }
+            arr2[p] = b;
+            for(int i=p; i<arr.length; i++){
+                arr2[i+1] = arr[i];
+            }
+            return arr2;
+        }
+        public static void main(String[] args) {
+            int arr[] = {10, 20, 30, 40, 50};
+            int B=5;
+
+            int arr2[] = addBeginning(arr, B);
+            for(int i=0; i<arr2.length; i++){
+                System.out.println("Add Begining: " + arr2[i]);
+            }
+
+            int arr3[] = addEnd(arr, B);
+            for(int i=0; i<arr3.length; i++){
+                System.out.println("Add End: " + arr3[i]);
+            }
+
+            int p=3;
+            int arr4[] = addMiddle(arr, B, p);
+            for(int i=0; i<arr4.length; i++){
+                System.out.println("Add Middle: " + arr4[i]);
+            }
+        }
+}
