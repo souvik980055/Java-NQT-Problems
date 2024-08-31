@@ -1,0 +1,23 @@
+import java.util.HashSet;
+
+public class FindRepeatEle {
+    public static void findRepeatEle(int arr[]){
+        HashSet<Integer> seen = new HashSet<>();
+        HashSet<Integer> repeating = new HashSet<>();
+
+        for(int i=0; i<arr.length; i++){
+            if(!seen.add(arr[i])){
+                repeating.add(arr[i]);
+            }
+        }
+        System.out.println("The repeating element are: ");
+        for(int element : repeating){
+            System.out.println(element);
+        }
+    }
+    
+    public static void main(String[] args) {
+        int arr[] = {2, 5, 3, 8, 4 ,3, 2, 2, 8};
+        findRepeatEle(arr);
+    }
+}
